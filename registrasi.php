@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in & Sign up Form</title>
+    <title>Sign up Form</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <form action="" method="post" class="sign-in-form">
                         <div class="logo">
                             <img src="./img/logo.png" alt="easyclass" />
-                            <h4>easyclass</h4>
+                            <h4>RJ.ID</h4>
                         </div>
 
                         <div class="heading">

@@ -25,6 +25,8 @@ if (isset($_POST["submit"])) {
                 if (password_verify($password, $row["password"])) {
                     //return true;  
                     $_SESSION["usersname"] = $usersname;
+                    $_SESSION["alamat"] = $alamat;
+                    $_SESSION["nomor_hp"] = $nomor_hp;
                     $_SESSION["loggedin"] = true;
                     $_SESSION["id"] = $id;
                     header("location:index.php");
@@ -39,6 +41,8 @@ if (isset($_POST["submit"])) {
     }
 }
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +52,7 @@ if (isset($_POST["submit"])) {
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign in & Sign up Form</title>
+    <title>Sign in</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -62,7 +66,7 @@ if (isset($_POST["submit"])) {
                     <form action="" method="post" class="sign-in-form">
                         <div class="logo">
                             <img src="./img/logo.png" alt="easyclass" />
-                            <h4>easyclass</h4>
+                            <h4>RJ.ID</h4>
                         </div>
 
                         <div class="heading">

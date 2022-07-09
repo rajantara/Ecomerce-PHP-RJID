@@ -1,39 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<!-- Basic -->
+<?php
+include('header.php');
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!-- Mobile Metas -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Site Metas -->
-    <title>ThewayShop - Ecommerce Bootstrap 4 HTML Template</title>
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <!-- Site Icons -->
-    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Site CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Responsive CSS -->
-    <link rel="stylesheet" href="css/responsive.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/custom.css">
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
+?>
 
 <body>
 
@@ -46,19 +14,7 @@
                         <div id="offer-box" class="carouselTicker">
                             <ul class="offer-box">
                                 <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
+                                    <i class="fab fa-opencart"></i> Hello! <?php echo htmlspecialchars($_SESSION["usersname"]); ?>
                                 </li>
                                 <li>
                                     <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
@@ -76,17 +32,17 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-						<option>¥ JPY</option>
-						<option>$ USD</option>
-						<option>€ EUR</option>
-					</select>
+                            <option>¥ JPY</option>
+                            <option>$ USD</option>
+                            <option>€ EUR</option>
+                        </select>
                     </div>
                     <div class="right-phone-box">
                         <p>Call US :- <a href="#"> +11 900 800 100</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
-                            <li><a href="#">My Account</a></li>
+                            <li><a href="my-account.php">My Account</a></li>
                             <li><a href="#">Our location</a></li>
                             <li><a href="#">Contact Us</a></li>
                         </ul>
@@ -105,8 +61,8 @@
                 <!-- Start Header Navigation -->
                 <div class="navbar-header">
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="fa fa-bars"></i>
-                </button>
+                        <i class="fa fa-bars"></i>
+                    </button>
                     <a class="navbar-brand" href="index.html"><img src="images/logo.png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
@@ -114,8 +70,8 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="index.php">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
                         <li class="dropdown megamenu-fw">
                             <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">Product</a>
                             <ul class="dropdown-menu megamenu-content" role="menu">
@@ -194,9 +150,9 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
-                            <span class="badge">3</span>
-					</a></li>
+                                <i class="fa fa-shopping-bag"></i>
+                                <span class="badge">3</span>
+                            </a></li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
@@ -265,48 +221,6 @@
     <!-- Start Cart  -->
     <div class="cart-box-main">
         <div class="container">
-            <div class="row new-account-login">
-                <div class="col-sm-6 col-lg-6 mb-3">
-                    <div class="title-left">
-                        <h3>Account Login</h3>
-                    </div>
-                    <h5><a data-toggle="collapse" href="#formLogin" role="button" aria-expanded="false">Click here to Login</a></h5>
-                    <form class="mt-3 collapse review-form-box" id="formLogin">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="InputEmail" class="mb-0">Email Address</label>
-                                <input type="email" class="form-control" id="InputEmail" placeholder="Enter Email"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputPassword" class="mb-0">Password</label>
-                                <input type="password" class="form-control" id="InputPassword" placeholder="Password"> </div>
-                        </div>
-                        <button type="submit" class="btn hvr-hover">Login</button>
-                    </form>
-                </div>
-                <div class="col-sm-6 col-lg-6 mb-3">
-                    <div class="title-left">
-                        <h3>Create New Account</h3>
-                    </div>
-                    <h5><a data-toggle="collapse" href="#formRegister" role="button" aria-expanded="false">Click here to Register</a></h5>
-                    <form class="mt-3 collapse review-form-box" id="formRegister">
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="InputName" class="mb-0">First Name</label>
-                                <input type="text" class="form-control" id="InputName" placeholder="First Name"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputLastname" class="mb-0">Last Name</label>
-                                <input type="text" class="form-control" id="InputLastname" placeholder="Last Name"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputEmail1" class="mb-0">Email Address</label>
-                                <input type="email" class="form-control" id="InputEmail1" placeholder="Enter Email"> </div>
-                            <div class="form-group col-md-6">
-                                <label for="InputPassword1" class="mb-0">Password</label>
-                                <input type="password" class="form-control" id="InputPassword1" placeholder="Password"> </div>
-                        </div>
-                        <button type="submit" class="btn hvr-hover">Register</button>
-                    </form>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
@@ -345,22 +259,23 @@
                             </div>
                             <div class="mb-3">
                                 <label for="address2">Address 2 *</label>
-                                <input type="text" class="form-control" id="address2" placeholder=""> </div>
+                                <input type="text" class="form-control" id="address2" placeholder="">
+                            </div>
                             <div class="row">
                                 <div class="col-md-5 mb-3">
                                     <label for="country">Country *</label>
                                     <select class="wide w-100" id="country">
-									<option value="Choose..." data-display="Select">Choose...</option>
-									<option value="United States">United States</option>
-								</select>
+                                        <option value="Choose..." data-display="Select">Choose...</option>
+                                        <option value="United States">United States</option>
+                                    </select>
                                     <div class="invalid-feedback"> Please select a valid country. </div>
                                 </div>
                                 <div class="col-md-4 mb-3">
                                     <label for="state">State *</label>
                                     <select class="wide w-100" id="state">
-									<option data-display="Select">Choose...</option>
-									<option>California</option>
-								</select>
+                                        <option data-display="Select">Choose...</option>
+                                        <option>California</option>
+                                    </select>
                                     <div class="invalid-feedback"> Please provide a valid state. </div>
                                 </div>
                                 <div class="col-md-3 mb-3">
@@ -429,7 +344,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <hr class="mb-1"> </form>
+                            <hr class="mb-1">
+                        </form>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-6 mb-3">
@@ -442,15 +358,18 @@
                                 <div class="mb-4">
                                     <div class="custom-control custom-radio">
                                         <input id="shippingOption1" name="shipping-option" class="custom-control-input" checked="checked" type="radio">
-                                        <label class="custom-control-label" for="shippingOption1">Standard Delivery</label> <span class="float-right font-weight-bold">FREE</span> </div>
+                                        <label class="custom-control-label" for="shippingOption1">Standard Delivery</label> <span class="float-right font-weight-bold">FREE</span>
+                                    </div>
                                     <div class="ml-4 mb-2 small">(3-7 business days)</div>
                                     <div class="custom-control custom-radio">
                                         <input id="shippingOption2" name="shipping-option" class="custom-control-input" type="radio">
-                                        <label class="custom-control-label" for="shippingOption2">Express Delivery</label> <span class="float-right font-weight-bold">$10.00</span> </div>
+                                        <label class="custom-control-label" for="shippingOption2">Express Delivery</label> <span class="float-right font-weight-bold">$10.00</span>
+                                    </div>
                                     <div class="ml-4 mb-2 small">(2-4 business days)</div>
                                     <div class="custom-control custom-radio">
                                         <input id="shippingOption3" name="shipping-option" class="custom-control-input" type="radio">
-                                        <label class="custom-control-label" for="shippingOption3">Next Business day</label> <span class="float-right font-weight-bold">$20.00</span> </div>
+                                        <label class="custom-control-label" for="shippingOption3">Next Business day</label> <span class="float-right font-weight-bold">$20.00</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -514,7 +433,8 @@
                                     <h5>Grand Total</h5>
                                     <div class="ml-auto h5"> $ 388 </div>
                                 </div>
-                                <hr> </div>
+                                <hr>
+                            </div>
                         </div>
                         <div class="col-12 d-flex shopping-box"> <a href="checkout.html" class="ml-auto btn hvr-hover">Place Order</a> </div>
                     </div>
@@ -622,7 +542,7 @@
                         <div class="footer-widget">
                             <h4>About ThewayShop</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                                </p>
+                            </p>
                             <ul>
                                 <li><a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
                                 <li><a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
@@ -672,7 +592,8 @@
     <!-- Start copyright  -->
     <div class="footer-copyright">
         <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">html design</a></p>
+            <a href="https://html.design/">html design</a>
+        </p>
     </div>
     <!-- End copyright  -->
 

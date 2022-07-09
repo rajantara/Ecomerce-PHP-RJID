@@ -18,3 +18,7 @@ $desc_produk = "";
 $link_produk = "";
 $wa_produk = "";
 $kategori_produk = "";
+
+// user
+$alamat = "";
+$nomor_hp = "";

@@ -53,7 +53,7 @@ include('proses.php');
                     <div class="mb-3 row">
                         <label for="desc_produk" class="col-sm-2 col-form-label">Deskrispi</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="desc_produk" name="desc_produk" value="<?php echo $desc_produk ?>">
+                            <textarea rows="9" <input type="text" class="form-control" id="desc_produk" name="desc_produk" value="<?php echo $desc_produk ?>"> </textarea>
                         </div>
                     </div>
                     <div class="mb-3 row">

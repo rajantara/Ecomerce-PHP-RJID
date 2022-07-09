@@ -31,17 +31,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <li>
                                     <i class="fab fa-opencart"></i> Off 50%! Shop Now
                                 </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 10%! Shop Now Man
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 50% - 80% off on Fashion
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> 20% off Entire Purchase Promo code: offT20
-                                </li>
-                                <li>
-                                    <i class="fab fa-opencart"></i> Off 50%! Shop Now
                                 </li>
                             </ul>
                         </div>
@@ -49,19 +38,22 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
-                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
+                        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ RP">
+                            <option>€ RP</option>
                             <option>¥ JPY</option>
                             <option>$ USD</option>
                             <option>€ EUR</option>
                         </select>
                     </div>
                     <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +11 900 800 100</a></p>
+                        <p>Call ID : <a href="https://wa.me/qr/ZXM5LFYHUI4QN1"> 62+ 082344068300</a></p>
                     </div>
                     <div class="our-link">
                         <ul>
+                            <li>
+                                <i class="fab fa-opencart"></i> Hello! <?php echo htmlspecialchars($_SESSION["usersname"]); ?>
+                            </li>
                             <li><a href="my-account.php">My Account</a></li>
-                            <li><a href="#">Our location</a></li>
                             <li><a href="logout.php">log Out</a></li>
                         </ul>
                     </div>
@@ -90,73 +82,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.php">About Us</a></li>
-                        <li class="dropdown megamenu-fw">
-                            <a href="#" class="nav-link " data-toggle="dropdown">Product</a>
-                            <ul class="dropdown-menu megamenu-content" role="menu">
-                                <li>
-                                    <div class="row">
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Top</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.php">Jackets</a></li>
-                                                    <li><a href="shop.php">Shirts</a></li>
-                                                    <li><a href="shop.php">Sweaters & Cardigans</a></li>
-                                                    <li><a href="shop.php">T-shirts</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Bottom</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.php">Swimwear</a></li>
-                                                    <li><a href="shop.php">Skirts</a></li>
-                                                    <li><a href="shop.php">Jeans</a></li>
-                                                    <li><a href="shop.php">Trousers</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Clothing</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.php">Top Wear</a></li>
-                                                    <li><a href="shop.php">Party wear</a></li>
-                                                    <li><a href="shop.php">Bottom Wear</a></li>
-                                                    <li><a href="shop.php">Indian Wear</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-menu col-md-3">
-                                            <h6 class="title">Accessories</h6>
-                                            <div class="content">
-                                                <ul class="menu-col">
-                                                    <li><a href="shop.php">Bags</a></li>
-                                                    <li><a href="shop.php">Sunglasses</a></li>
-                                                    <li><a href="shop.php">Fragrances</a></li>
-                                                    <li><a href="shop.php">Wallets</a></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <!-- end col-3 -->
-                                    </div>
-                                    <!-- end row -->
-                                </li>
-                            </ul>
-                        </li>
                         <li class="dropdown">
                             <a href="#" class="nav-link " data-toggle="dropdown">SHOP</a>
                             <ul class="dropdown-menu">
-                                <li><a href="cart.php">Cart</a></li>
-                                <li><a href="checkout.php">Checkout</a></li>
-                                <li><a href="wishlist.php">Wishlist</a></li>
-                                <li><a href="shop-detail.php">Shop Detail</a></li>
+                                <li><a href="error.php">Wishlist</a></li>
+                                <li><a href="error.php">Shop Detail</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item"><a class="nav-link" href="service.php">Our Service</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact-us.php">Contact Us</a></li>
                     </ul>
                 </div>
@@ -168,40 +100,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#">
                                 <i class="fa fa-shopping-bag"></i>
-                                <span class="badge">3</span>
+                                <span class="badge">1</span>
                             </a></li>
                     </ul>
                 </div>
                 <!-- End Atribute Navigation -->
             </div>
-            <!-- Start Side Menu -->
-            <div class="side">
-                <a href="#" class="close-side"><i class="fa fa-times"></i></a>
-                <li class="cart-box">
-                    <ul class="cart-list">
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-01.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Delica omtantur </a></h6>
-                            <p>1x - <span class="price">$80.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-02.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Omnes ocurreret</a></h6>
-                            <p>1x - <span class="price">$60.00</span></p>
-                        </li>
-                        <li>
-                            <a href="#" class="photo"><img src="images/img-pro-03.jpg" class="cart-thumb" alt="" /></a>
-                            <h6><a href="#">Agam facilisis</a></h6>
-                            <p>1x - <span class="price">$40.00</span></p>
-                        </li>
-                        <li class="total">
-                            <a href="#" class="btn btn-default hvr-hover btn-cart">VIEW CART</a>
-                            <span class="float-right"><strong>Total</strong>: $180.00</span>
-                        </li>
-                    </ul>
-                </li>
-            </div>
-            <!-- End Side Menu -->
         </nav>
         <!-- End Navigation -->
     </header>
@@ -231,7 +135,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <p>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends
                                 to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p><a class="btn hvr-hover" href="https://tokopedia.link/rj-id">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -244,7 +148,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <h1 class="m-b-20"><strong>Welcome To <br> RJ.ID Shop</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends
                                 to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p><a class="btn hvr-hover" href="https://tokopedia.link/rj-id">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -257,7 +161,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <h1 class="m-b-20"><strong>Welcome To <br> RJ.ID Shop</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends
                                 to see any changes in performance over time.</p>
-                            <p><a class="btn hvr-hover" href="#">Shop New</a></p>
+                            <p><a class="btn hvr-hover" href="https://tokopedia.link/rj-id">Shop New</a></p>
                         </div>
                     </div>
                 </div>
@@ -277,32 +181,33 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
-                            <img class="img-fluid" src="images/coba3.png" alt="" />
+                            <img class="img-fluid" src="berkas/131WhatsApp Image 2022-06-26 at 21.33.37.jpeg" alt="" />
                             <a class="btn hvr-hover" href="fahsion-man.php">Fashion Man</a>
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/r.png" alt="" />
-                            <a class="btn hvr-hover" href="#">Fashion women</a>
+                            <a class="btn hvr-hover" href="coming.php">Fashion women</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/p.png" alt="" />
-                            <a class="btn hvr-hover" href="#">Wallet & Bags</a>
+                            <a class="btn hvr-hover" href="coming.php">Wallet & Bags</a>
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/c.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Boneka</a>
+                            <a class="btn hvr-hover" href="coming.php">
+                                Puppet</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/shoes-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Perabotan Rumah Tangga</a>
+                            <a class="btn hvr-hover" href="coming.php">Shoes</a>
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/women-shoes-img.jpg" alt="" />
-                            <a class="btn hvr-hover" href="#">Aksesoris Kendaraan</a>
+                            <a class="btn hvr-hover" href="coming.php">Shoes women</a>
                         </div>
                     </div>
                 </div>
