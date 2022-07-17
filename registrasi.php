@@ -9,13 +9,13 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $usersname = $_POST['usersname'];
     $password = mysqli_real_escape_string($koneksi, $_POST["password"]);
     $password = password_hash($password, PASSWORD_DEFAULT);
-    $alamat = $_POST['alamat'];
     $nomor_hp = $_POST['nomor_hp'];
     if (!empty($usersname) && !empty($password) && !is_numeric($usersname)) {
 
         //save to database
         $id = random_num(20);
-        $query = "insert into user (id,usersname,password,alamat,nomor_hp) values ('$id','$usersname','$password',' $alamat','$nomor_hp')";
+
+        $query = "insert into user (id,usersname,password,nomor_hp) values ('$id','$usersname','$password','$nomor_hp')";
 
         mysqli_query($koneksi, $query);
 
@@ -69,13 +69,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             </div>
 
                             <div class="input-wrap">
-                                <input name="alamat" type="text" minlength="4" class="input-field" autocomplete="off" required />
-                                <label>Alamat</label>
-                            </div>
-
-                            <div class="input-wrap">
                                 <input name="nomor_hp" type="text" minlength="4" class="input-field" autocomplete="off" required />
-                                <label>WhatApp</label>
+                                <label>WhatsApp</label>
                             </div>
 
                             <input type="submit" value="Sign Up" class="sign-btn" />
@@ -102,9 +97,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                 <div class="text-slider">
                     <div class="text-wrap">
                         <div class="text-group">
-                            <h2>Create your own courses</h2>
-                            <h2>Customize as you like</h2>
-                            <h2>Invite students to your class</h2>
+                            <h2>Registration Now</h2>
+                            <h2>RJ.ID shopping</h2>
+                            <h2>Invite Your friends</h2>
                         </div>
                     </div>
 

@@ -94,7 +94,12 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#">
                                 <i class="fa fa-shopping-bag"></i>
-                                <span class="badge">1</span>
+                                <?php
+                                $sql    = "SELECT * FROM produk";
+                                $query    = mysqli_query($koneksi, $sql);
+                                $count    = mysqli_num_rows($query);
+                                echo "<span class='badge'>$count</span>";
+                                ?>
                             </a></li>
                     </ul>
                 </div>
@@ -199,7 +204,21 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
 
     <!-- Start Products  -->
     <?php
-    $sql2   = "select * from produk order by id_produk desc";
+
+    //pagination
+    $batas = 4;
+    $halaman = isset($_GET['halaman']) ? (int)$_GET['halaman'] : 1;
+    $halaman_awal = ($halaman > 1) ? ($halaman * $batas) - $batas : 0;
+    $previous = $halaman - 1;
+    $next = $halaman + 1;
+    $data = mysqli_query($koneksi, "select * from produk");
+    $jumlah_data = mysqli_num_rows($data);
+    $total_halaman = ceil($jumlah_data / $batas);
+    $nomor = $halaman_awal + 1;
+    //end
+
+
+    $sql2   = "select * from produk limit $halaman_awal, $batas";
     $q2     = mysqli_query($koneksi, $sql2);
     while ($row = mysqli_fetch_array($q2)) {
         $id_produk         = $row['id_produk'];
@@ -255,16 +274,24 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     <!-- End Products  -->
 
     <!-- PAGINATION -->
-    <nav aria-label="Page navigation example">
+    <nav>
         <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1">Previous</a>
-            </li>
-            <li class="page-item"><a class="page-link" href="#">1</a></li>
-            <li class="page-item"><a class="page-link" href="#">2</a></li>
-            <li class="page-item"><a class="page-link" href="#">3</a></li>
             <li class="page-item">
-                <a class="page-link" href="#">Next</a>
+                <a class="page-link" <?php if ($halaman > 1) {
+                                            echo "href='?halaman=$previous'";
+                                        } ?>>Previous</a>
+            </li>
+            <?php
+            for ($x = 1; $x <= $total_halaman; $x++) {
+            ?>
+                <li class="page-item"><a class="page-link" href="?halaman=<?php echo $x ?>"><?php echo $x; ?></a></li>
+            <?php
+            }
+            ?>
+            <li class="page-item">
+                <a class="page-link" <?php if ($halaman < $total_halaman) {
+                                            echo "href='?halaman=$next'";
+                                        } ?>>Next</a>
             </li>
         </ul>
     </nav>

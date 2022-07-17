@@ -106,9 +106,9 @@ if (isset($_POST["submit"])) {
                     <div class="text-slider">
                         <div class="text-wrap">
                             <div class="text-group">
-                                <h2>Create your own courses</h2>
-                                <h2>Customize as you like</h2>
-                                <h2>Invite students to your class</h2>
+                                <h2>Login Now</h2>
+                                <h2>RJ.ID shopping</h2>
+                                <h2>Invite Your friends</h2>
                             </div>
                         </div>
 

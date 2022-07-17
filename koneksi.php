@@ -2,7 +2,7 @@
 $servername = "localhost";
 $database = "db";
 $username = "root";
-$password = "";
+$password = "12345";
 
 
 // membuat koneksi
