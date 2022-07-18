@@ -73,7 +73,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="fa fa-bars"></i>
                     </button>
-                    <a class="navbar-brand" href="index.php"><img src="images/logo.png" class="logo" alt=""></a>
+                    <a class="navbar-brand" href="index.php"><img src="images/logo (1).png" class="logo" alt=""></a>
                 </div>
                 <!-- End Header Navigation -->
 
@@ -186,7 +186,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                         </div>
                         <div class="shop-cat-box">
                             <img class="img-fluid" src="images/r.png" alt="" />
-                            <a class="btn hvr-hover" href="coming.php">Fashion women</a>
+                            <a class="btn hvr-hover" href="fahsion-women.php">Fashion women</a>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
